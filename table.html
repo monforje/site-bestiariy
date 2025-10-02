@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>Таблица наблюдений — Славянский бестиарий</title>
   </head>
   <body>
     <a href="main.html">Славянский бестиарий</a>
-    <br /><a href="table.html">Все славянские существа</a>
-    <hr />
+    <br><a href="table.html">Все славянские существа</a>
+    <hr>
 
     <details>
       <summary>График</summary>
@@ -20,31 +20,24 @@
           <td>
             <form>
               <p>
-                <input type="radio" name="ox" value="date" checked /> Дата
-                наблюдения<br />
-                <input type="radio" name="ox" value="location" /> Тип местности
-                (лес, болото, вода)<br />
-                <input type="radio" name="ox" value="creature" /> Существо<br />
-                <input type="radio" name="ox" value="timeofday" /> Время суток
-                (день/ночь/сумерки)
+                <input type="radio" name="ox" value="date" checked> Дата наблюдения<br>
+                <input type="radio" name="ox" value="location"> Тип местности (лес, болото, вода)<br>
+                <input type="radio" name="ox" value="creature"> Существо<br>
+                <input type="radio" name="ox" value="timeofday"> Время суток (день/ночь/сумерки)
               </p>
             </form>
           </td>
           <td>
             <form>
-              <input type="checkbox" name="y" value="count" checked />
-              Количество наблюдений<br />
-              <input type="checkbox" name="y" value="confidence_avg" /> Средняя
-              достоверность<br />
-              <input type="checkbox" name="y" value="signs_count" /> Среднее
-              число примет<br />
-              <input type="checkbox" name="y" value="rarity" /> Индекс редкости
-              (по доле записей)
+              <input type="checkbox" name="y" value="count" checked> Количество наблюдений<br>
+              <input type="checkbox" name="y" value="confidence_avg"> Средняя достоверность<br>
+              <input type="checkbox" name="y" value="signs_count"> Среднее число примет<br>
+              <input type="checkbox" name="y" value="rarity"> Индекс редкости (по доле записей)
             </form>
           </td>
         </tr>
       </table>
-      <input type="button" value="Построить" />
+      <input type="button" value="Построить">
       <p>График</p>
     </details>
 
@@ -52,82 +45,59 @@
       <summary>Фильтр</summary>
       <form>
         <p>
-          <label
-            >Существо:
-            <select id="creature">
-              <option value="">— любое —</option>
-              <option>Леший</option>
-              <option>Кикимора</option>
-              <option>Водяной</option>
-              <option>Оборотень</option>
-              <option>Вампир</option>
-            </select>
-          </label>
+          <label for="creature">Существо:</label>
+          <select id="creature">
+            <option value="">— любое —</option>
+            <option>Леший</option>
+            <option>Кикимора</option>
+            <option>Водяной</option>
+            <option>Оборотень</option>
+            <option>Вампир</option>
+          </select>
         </p>
+
         <p>
-          <label
-            >Тип местности:
-            <select id="place_type">
-              <option value="">— любой —</option>
-              <option>Лес</option>
-              <option>Болото</option>
-              <option>Вода (река/озеро)</option>
-              <option>Деревня/двор</option>
-              <option>Поля/луга</option>
-            </select>
-          </label>
+          <label for="place_type">Тип местности:</label>
+          <select id="place_type">
+            <option value="">— любой —</option>
+            <option>Лес</option>
+            <option>Болото</option>
+            <option>Вода (река/озеро)</option>
+            <option>Деревня/двор</option>
+            <option>Поля/луга</option>
+          </select>
         </p>
+
         <p>
-          <label
-            >Время суток:
-            <select id="timeofday">
-              <option value="">— любое —</option>
-              <option>День</option>
-              <option>Сумерки</option>
-              <option>Ночь</option>
-            </select>
-          </label>
+          <label for="timeofday">Время суток:</label>
+          <select id="timeofday">
+            <option value="">— любое —</option>
+            <option>День</option>
+            <option>Сумерки</option>
+            <option>Ночь</option>
+          </select>
         </p>
+
         <p>
-          <label
-            >Признаки (ключевые слова):
-            <input
-              type="text"
-              id="signs"
-              size="28"
-              placeholder="эхо, огни, тишина, следы"
-            />
-          </label>
+          <label for="signs">Признаки (ключевые слова):</label>
+          <input type="text" id="signs" size="28" placeholder="эхо, огни, тишина, следы">
         </p>
+
         <p>
-          <label
-            >Дата: с <input type="date" id="date_from" /> по
-            <input type="date" id="date_to" />
-          </label>
+          <label for="date_from">Дата: с</label>
+          <input type="date" id="date_from">
+          <label for="date_to">по</label>
+          <input type="date" id="date_to">
         </p>
+
         <p>
-          <label
-            >Достоверность: от
-            <input
-              type="number"
-              id="conf_min"
-              min="0"
-              max="100"
-              step="5"
-              value="0"
-            />
-            до
-            <input
-              type="number"
-              id="conf_max"
-              min="0"
-              max="100"
-              step="5"
-              value="100"
-            />
-          </label>
+          <label for="conf_min">Достоверность: от</label>
+          <input type="number" id="conf_min" min="0" max="100" step="5" value="0">
+          <label for="conf_max">до</label>
+          <input type="number" id="conf_max" min="0" max="100" step="5" value="100">
         </p>
-        <input type="button" value="Найти" />
+
+        <input type="button" value="Найти">
       </form>
     </details>
 
@@ -142,7 +112,7 @@
           <option value="creature">Существо</option>
           <option value="place_type">Тип местности</option>
         </select>
-        по убыванию? <input type="checkbox" name="desc1" value="1" />
+        по убыванию? <input type="checkbox" name="desc1" value="1">
       </p>
       <p>
         Второй уровень:
@@ -152,7 +122,7 @@
           <option value="creature">Существо</option>
           <option value="timeofday">Время суток</option>
         </select>
-        по убыванию? <input type="checkbox" name="desc2" value="1" />
+        по убыванию? <input type="checkbox" name="desc2" value="1">
       </p>
       <p>
         Третий уровень:
@@ -161,9 +131,9 @@
           <option value="signs_count">Число примет</option>
           <option value="place_type">Тип местности</option>
         </select>
-        по убыванию? <input type="checkbox" name="desc3" value="1" />
+        по убыванию? <input type="checkbox" name="desc3" value="1">
       </p>
-      <input type="button" value="Сортировать" />
+      <input type="button" value="Сортировать">
     </details>
 
         <table border="2" cellspacing="0" cellpadding="5" align="center">
@@ -229,7 +199,7 @@
     </table>
 
     <footer>
-      <hr size="1" width="100%" align="center" />
+      <hr size="1" width="100%" align="center">
       <p align="center">
         Группа: <b>Б9123-09.03.04, 1 подгруппа</b> • Разработчик:
         <b>Комаров Даниил Иванович</b>
