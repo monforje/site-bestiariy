@@ -45,18 +45,6 @@
       <summary>Фильтр</summary>
       <form>
         <p>
-          <label for="creature">Существо:</label>
-          <select id="creature">
-            <option value="">— любое —</option>
-            <option>Леший</option>
-            <option>Кикимора</option>
-            <option>Водяной</option>
-            <option>Оборотень</option>
-            <option>Вампир</option>
-          </select>
-        </p>
-
-        <p>
           <label for="place_type">Тип местности:</label>
           <select id="place_type">
             <option value="">— любой —</option>
@@ -104,34 +92,15 @@
     <details>
       <summary>Сортировка</summary>
       <p>
-        Первый уровень:
+        Сортировка по
         <select name="sort1">
-          <option value="date" selected>Дата</option>
-          <option value="confidence">Достоверность</option>
-          <option value="rarity">Редкость (реже — выше)</option>
-          <option value="creature">Существо</option>
-          <option value="place_type">Тип местности</option>
+          <option value="date" selected>Дате</option>
+          <option value="confidence">Достоверности</option>
+          <option value="rarity">Редкости (реже — выше)</option>
+          <option value="signs_count">Числу примет</option>
+
         </select>
         по убыванию? <input type="checkbox" name="desc1" value="1">
-      </p>
-      <p>
-        Второй уровень:
-        <select name="sort2">
-          <option value="none">Нет</option>
-          <option value="confidence">Достоверность</option>
-          <option value="creature">Существо</option>
-          <option value="timeofday">Время суток</option>
-        </select>
-        по убыванию? <input type="checkbox" name="desc2" value="1">
-      </p>
-      <p>
-        Третий уровень:
-        <select name="sort3">
-          <option value="none">Нет</option>
-          <option value="signs_count">Число примет</option>
-          <option value="place_type">Тип местности</option>
-        </select>
-        по убыванию? <input type="checkbox" name="desc3" value="1">
       </p>
       <input type="button" value="Сортировать">
     </details>
